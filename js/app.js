@@ -13,64 +13,64 @@
 // console.log(hours);
 
 
-//Stores min and max customer hourly and avg cookies purchased/customer
+//Stores minCustomers and maxCustomers customer hourly and avg cookies purchased/customer
 // var storeLocations = {
-//   seattle : { min: 23, max: 65, avgSale:6.3, function()},
-//   tokyo : { min: 3, max: 24, avgSale: 1.2},
-//   dubai : { min: 11, max: 38, avgSale: 3.7},
-//   paris : { min: 20,max: 38, avgSale: 2.3},
-//   lima : { min: 2, max: 16, avgSale: 4.6},
+//   seattle : { minCustomers: 23, maxCustomers: 65, avgSale:6.3, function()},
+//   tokyo : { minCustomers: 3, maxCustomers: 24, avgSale: 1.2},
+//   dubai : { minCustomers: 11, maxCustomers: 38, avgSale: 3.7},
+//   paris : { minCustomers: 20,maxCustomers: 38, avgSale: 2.3},
+//   lima : { minCustomers: 2, maxCustomers: 16, avgSale: 4.6},
 // };
 
 var seattle = {
   name: 'Seattle',
-  min: 23,
-  max: 65,
+  minCustomers: 23,
+  maxCustomers: 65,
   avgSale: 6.3,
   salesCookies: [],
-  randCookies: function () {
-    var customer = this.max - this.min + 1;
-    var rand = Math.floor(Math.random() * customer) + this.min;
+  randCookiesSales: function () {
+    var customer = this.maxCustomers - this.minCustomers + 1;
+    var rand = Math.floor(Math.random() * customer) + this.minCustomers;
     return rand;
   }
 };
 
 var tokyo = {
   name: 'Tokyo',
-  min: 3,
-  max: 24,
+  minCustomers: 3,
+  maxCustomers: 24,
   avgSale: 1.2,
   salesCookies: [],
-  randCookies: function () {
-    var customer = this.max - this.min + 1;
+  randCookiesSales: function () {
+    var customer = this.maxCustomers - this.minCustomers + 1;
     var rand = Math.floor(Math.random() * customer);
-    return this.min + rand;
+    return this.minCustomers + rand;
   }
 };
 
 var dubai = {
   name: 'Dubai',
-  min: 11,
-  max: 38,
+  minCustomers: 11,
+  maxCustomers: 38,
   avgSale: 3.7,
   salesCookies: [],
-  randCookies: function () {
-    var customer = this.max - this.min + 1;
+  randCookiesSales: function () {
+    var customer = this.maxCustomers - this.minCustomers + 1;
     var rand = Math.floor(Math.random() * customer);
-    return this.min + rand;
+    return this.minCustomers + rand;
   }
 };
 
 var paris = {
   name: 'Paris',
-  min: 20,
-  max: 38,
+  minCustomers: 20,
+  maxCustomers: 38,
   avgSale: 2.3,
   salesCookies: [],
-  randCookies: function () {
-    var customer = this.max - this.min + 1;
+  randCookiesSales: function () {
+    var customer = this.maxCustomers - this.minCustomers + 1;
     var rand = Math.floor(Math.random() * customer);
-    return this.min + rand;
+    return this.minCustomers + rand;
   }
 };
 
@@ -80,7 +80,7 @@ var lima = {
   maxCustomers: 16,
   avgSale: 4.6,
   salesCookies: [],
-  randCookies: function () {
+  randCookiesSales: function () {
     var customer = this.maxCustomers - this.minCustomers + 1;
     var rand = Math.floor(Math.random() * customer);
     return this.minCustomers + rand;
@@ -90,7 +90,7 @@ var lima = {
 //calculate ramdom amount of cookies sold per hour
 function saleDay(store) {
   for (var i = 0; i < hours.length; i++)
-    store.salesCookies[i] = Math.ceil(store.randCookies() * store.avgSale);
+    store.salesCookies[i] = Math.ceil(store.randCookiesSales() * store.avgSale);
 }
 
 //array of data
