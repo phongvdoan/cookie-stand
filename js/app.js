@@ -1,7 +1,4 @@
-
-
-
-
+//maybe create a function to input store hours and create an array for the hours.
 // var storeOpen = 6;
 // var storeClose = 20;
 // var hours = '';
@@ -79,14 +76,14 @@ var paris = {
 
 var lima = {
   name: 'Lima',
-  min: 2,
-  max: 16,
+  minCustomers: 2,
+  maxCustomers: 16,
   avgSale: 4.6,
   salesCookies: [],
   randCookies: function () {
-    var customer = this.max - this.min + 1;
+    var customer = this.maxCustomers - this.minCustomers + 1;
     var rand = Math.floor(Math.random() * customer);
-    return this.min + rand;
+    return this.minCustomers + rand;
   }
 };
 
@@ -100,18 +97,18 @@ function saleDay(store) {
 var storeLocations = [seattle, tokyo, dubai, paris, lima];
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
-var body;
-var ul;
+// var body;
+// var ul;
 
 
 for (var i = 0; i < storeLocations.length; i++) {
   // console.log(storeLocations[i]);
   saleDay(storeLocations[i]);
   // console.log(storeLocations[i].salesCookies);
-  body = document.getElementById('list');
+  var body = document.getElementById('list');
   var h2 = document.createElement('h2');
   h2.textContent = storeLocations[i].name;
-  ul = document.createElement('ul');
+  var ul = document.createElement('ul');
   body.appendChild(h2);
   body.appendChild(ul);
 
