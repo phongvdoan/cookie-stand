@@ -102,6 +102,7 @@ var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '
 
 
 for (var i = 0; i < storeLocations.length; i++) {
+  var totalSales = 0;
   // console.log(storeLocations[i]);
   saleDay(storeLocations[i]);
   // console.log(storeLocations[i].salesCookies);
@@ -117,8 +118,11 @@ for (var i = 0; i < storeLocations.length; i++) {
   for (var j = 0; j < hours.length; j++) {
     var li = document.createElement('li');
     li.textContent = `${hours[j]}  : ${saleNum[j]} cookies`;
+    totalSales = totalSales + saleNum[j];
     ul.appendChild(li);
   }
+  li.textContent = `Totals : ${totalSales} cookies`;
+
 }
 
 
