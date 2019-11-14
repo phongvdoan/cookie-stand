@@ -68,7 +68,7 @@ function addElement(tag, container, text) {
   return element;
 }
 
-var body = document.getElementById('list');
+var body = document.getElementById('salesTable');
 var article = addElement('article', body);
 var tableElem = addElement('table', article);
 var overallTotal = 0;
