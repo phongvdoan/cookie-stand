@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>The <b>GREATEST</b> Salmon Cookies</title>
+  <title>The GREATEST Salmon Cookies</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header>
-     <img src="images/salmon.png" id="mainLogo">
+    <img src="images/salmon.png" id="mainLogo">
   </header>
-  <main id="list">
-    
+  <main>
+    <div id='forms'>
+    <form action="" id="addStore">
+      <fieldset>
+        <fieldset id='storeLocation'>
+          <legend>Add New Store</legend>
+          <label for="newStoreLocation">New Store Location: </label>
+          <input name="newStoreLocation" type="text" placeholder="New Location" required/>
+        </fieldset>
+
+          
+          <label for="minCustomers">Minimum number of customers in a day:</label>
+          <input type="number" name="minCustomers" step='.1'required>
+        <br>
+          <label for="maxCustomers">Maximum number of customers in a day:</label>
+          <input type="number" name="maxCustomers" step='.1'required>
+        <br>
+          <label for="aveHourlySales">Average number of cookie sales per hour:</label>
+          <input type="number" name="aveHourlySales" step='.1'required>
+        <br>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+  <div id="salesTable">
+    <h1> Hourly Sales Data for Location of Cookie Stand</h1>
+
+  </div>
   </main>
   <script src="js/test-app.js"></script>
 </body>
+
 </html>

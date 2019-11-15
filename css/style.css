@@ -1,4 +1,7 @@
   @import "reset.css";
+
+
+  
   header {
     background-color: cyan;
   }
@@ -87,4 +90,29 @@
     display: inline;
     position: relative;
     margin: 0 auto;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 19px;
+    font-weight: bolder;
+  }
+
+  #salesTable {
+    margin-top: 50px;
+  }
+
+  #forms {
+    background-color: goldenrod;
+    height: 150px;
+  }
+
+  #salesLocation {
+    display: inline-block;
+  }
+
+   label > span{
+    position: relative;
+  
+
   }
