@@ -104,4 +104,15 @@
 
   #forms {
     background-color: goldenrod;
+    height: 150px;
+  }
+
+  #salesLocation {
+    display: inline-block;
+  }
+
+   label > span{
+    position: relative;
+  
+
   }
