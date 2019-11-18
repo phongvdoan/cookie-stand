@@ -1,6 +1,8 @@
   @import "reset.css";
 
-
+* {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
   
   header {
     background-color: cyan;
@@ -53,6 +55,7 @@
     font-weight: bold;
     color: rgb(244, 245, 237);
     margin: 50px 0;
+    font-family: 'Open Sans', sans-serif;
   }
 
   img[alt~="fish"] {
@@ -90,16 +93,20 @@
     display: inline;
     position: relative;
     margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
   }
 
   h1 {
     text-align: center;
     font-size: 19px;
     font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
   }
 
   #salesTable {
     margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkgrey;
   }
 
   #forms {
